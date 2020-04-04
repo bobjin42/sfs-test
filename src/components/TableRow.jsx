@@ -1,7 +1,16 @@
 import React from "react";
 
 export default function TableRow({
-  rowData: { creditorName, firstName, lastName, minPaymentPercentage, balance },
+  rowData: {
+    id,
+    creditorName,
+    firstName,
+    lastName,
+    minPaymentPercentage,
+    balance,
+    checked,
+  },
+  handleRowCheckbox,
 }) {
   minPaymentPercentage = isNaN(Number(minPaymentPercentage))
     ? minPaymentPercentage.slice(0, -1)
@@ -12,6 +21,13 @@ export default function TableRow({
   return (
     <>
       <tr>
+        <td>
+          <input
+            type="checkbox"
+            checked={checked}
+            onChange={() => handleRowCheckbox(id)}
+          />
+        </td>
         <td>{creditorName}</td>
         <td>{firstName}</td>
         <td>{lastName}</td>
