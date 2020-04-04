@@ -9,7 +9,6 @@ export default function DebtInput({ handleDebtSave }) {
     lastName: "",
     minPaymentPercentage: "",
     balance: "",
-    // checked: false,
   };
   const [debtInputValue, setDebtInputValue] = useState(debtFields);
 

@@ -12,9 +12,6 @@ export default function TableRow({
   },
   handleRowCheckbox,
 }) {
-  minPaymentPercentage = isNaN(Number(minPaymentPercentage))
-    ? minPaymentPercentage.slice(0, -1)
-    : minPaymentPercentage;
   const formatedMinPayment = `${Number(minPaymentPercentage).toFixed(2)}%`;
   const formatedBalance = Number(balance).toFixed(2);
 

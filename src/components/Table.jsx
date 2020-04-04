@@ -25,6 +25,11 @@ export default function Table() {
   };
 
   const handleDebtSave = (debtData) => {
+    debtData.balance = debtData.balance ? Number(debtData.balance) : 0;
+    debtData.minPaymentPercentage = isNaN(Number(debtData.minPaymentPercentage))
+      ? debtData.minPaymentPercentage.slice(0, -1)
+      : debtData.minPaymentPercentage;
+    debtData.checked = false;
     setTableData([...tableData, debtData]);
     setAddingDebt(false);
   };
@@ -76,6 +81,7 @@ export default function Table() {
           </tr>
         </thead>
         <tbody>
+          {console.log(tableData)}
           {tableData.map((rowData) => {
             return (
               <TableRow
@@ -91,7 +97,10 @@ export default function Table() {
       <button onClick={handleAddDebt}>Add Debt</button>
       <button>Remove Debt</button>
       <div>
-        <div>{`Total ${countCheckedBalance()} `}</div>
+        <div>{`Total $${countCheckedBalance()
+          .toFixed(2)
+          .toString()
+          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} `}</div>
       </div>
       <div>
         <div>{`Total Row Count: ${tableData.length}`}</div>
