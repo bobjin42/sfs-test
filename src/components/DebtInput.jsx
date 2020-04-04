@@ -11,13 +11,22 @@ export default function DebtInput({ handleDebtSave }) {
     balance: "",
   };
   const [debtInputValue, setDebtInputValue] = useState(debtFields);
+  const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInputChange = (e) => {
     setDebtInputValue({ ...debtInputValue, [e.target.name]: e.target.value });
   };
 
+  const handleDebtSaveClick = () => {
+    handleDebtSave(debtInputValue);
+    setCheckboxStatus(false);
+  };
+
   return (
     <tr>
+      <td>
+        <input type="checkbox" disabled={checkboxStatus} />
+      </td>
       {Object.keys(debtFields)
         .slice(1)
         .map((debtField) => {
@@ -33,7 +42,7 @@ export default function DebtInput({ handleDebtSave }) {
           );
         })}
       <td>
-        <button onClick={() => handleDebtSave(debtInputValue)}>Save</button>
+        <button onClick={handleDebtSaveClick}>Save</button>
       </td>
     </tr>
   );

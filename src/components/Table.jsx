@@ -29,7 +29,9 @@ export default function Table() {
   };
 
   const handleDebtSave = (debtData) => {
-    debtData.balance = debtData.balance ? Number(debtData.balance) : 0;
+    debtData.balance = !isNaN(Number(debtData.balance))
+      ? Number(debtData.balance)
+      : 0;
     debtData.minPaymentPercentage = isNaN(Number(debtData.minPaymentPercentage))
       ? debtData.minPaymentPercentage.slice(0, -1)
       : debtData.minPaymentPercentage;
