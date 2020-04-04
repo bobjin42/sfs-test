@@ -16,12 +16,16 @@ export default function Table() {
       .then((data) => {
         data.forEach((rowData) => (rowData.checked = false));
         setTableData(data);
-        console.log(data);
       });
   }, []);
 
   const handleAddDebt = () => {
     setAddingDebt(true);
+  };
+
+  const handleRemoveDebt = () => {
+    let remainingTableData = tableData.filter((rowData) => !rowData.checked);
+    setTableData(remainingTableData);
   };
 
   const handleDebtSave = (debtData) => {
@@ -41,7 +45,6 @@ export default function Table() {
   };
 
   const handleRowCheckbox = (id) => {
-    console.log(id);
     let newTableData = tableData.map((row) => {
       if (row.id === id) row.checked = !row.checked;
       return row;
@@ -95,7 +98,7 @@ export default function Table() {
         </tbody>
       </table>
       <button onClick={handleAddDebt}>Add Debt</button>
-      <button>Remove Debt</button>
+      <button onClick={handleRemoveDebt}>Remove Debt</button>
       <div>
         <div>{`Total $${countCheckedBalance()
           .toFixed(2)
