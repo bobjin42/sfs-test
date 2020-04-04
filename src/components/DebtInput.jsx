@@ -24,7 +24,7 @@ export default function DebtInput({ handleDebtSave }) {
 
   return (
     <tr>
-      <td>
+      <td className="checkbox-td">
         <input type="checkbox" disabled={checkboxStatus} />
       </td>
       {Object.keys(debtFields)
@@ -41,7 +41,7 @@ export default function DebtInput({ handleDebtSave }) {
             </td>
           );
         })}
-      <td>
+      <td className="button-save-td">
         <button onClick={handleDebtSaveClick}>Save</button>
       </td>
     </tr>

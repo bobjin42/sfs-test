@@ -71,7 +71,7 @@ export default function Table() {
       <table>
         <thead>
           <tr>
-            <th>
+            <th className="checkbox-th">
               <input
                 type="checkbox"
                 checked={headerCheckbox}
@@ -81,8 +81,8 @@ export default function Table() {
             <th>Creditor</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Min Pay%</th>
-            <th>Balance</th>
+            <th className="text-right">Min Pay%</th>
+            <th className="text-right">Balance</th>
           </tr>
         </thead>
         <tbody>
@@ -101,15 +101,18 @@ export default function Table() {
       </table>
       <button onClick={handleAddDebt}>Add Debt</button>
       <button onClick={handleRemoveDebt}>Remove Debt</button>
-      <div>
-        <div>{`Total $${countCheckedBalance()
-          .toFixed(2)
-          .toString()
-          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} `}</div>
+      <div className="total-checked-debt">
+        <div>Total</div>
+        <div>
+          {`$${countCheckedBalance()
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} `}
+        </div>
       </div>
       <div>
-        <div>{`Total Row Count: ${tableData.length}`}</div>
-        <div>{`Checked Row Count: ${countCheckedbox()} `}</div>
+        <span className="total-row-count">{`Total Row Count: ${tableData.length}`}</span>
+        <span>{`Check Row Count: ${countCheckedbox()} `}</span>
       </div>
     </>
   );

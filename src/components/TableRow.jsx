@@ -17,8 +17,8 @@ export default function TableRow({
 
   return (
     <>
-      <tr>
-        <td>
+      <tr className="table-row">
+        <td className="checkbox-td">
           <input
             type="checkbox"
             checked={checked}
@@ -28,8 +28,8 @@ export default function TableRow({
         <td>{creditorName}</td>
         <td>{firstName}</td>
         <td>{lastName}</td>
-        <td>{formatedMinPayment}</td>
-        <td>{formatedBalance}</td>
+        <td className="text-right">{formatedMinPayment}</td>
+        <td className="text-right">{formatedBalance}</td>
       </tr>
     </>
   );
