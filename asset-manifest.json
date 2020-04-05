@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/%20//bobjin42.github.io/sfs-test/static/css/main.b9c4dabf.chunk.css",
+    "main.js": "/%20//bobjin42.github.io/sfs-test/static/js/main.fe3e6267.chunk.js",
+    "main.js.map": "/%20//bobjin42.github.io/sfs-test/static/js/main.fe3e6267.chunk.js.map",
+    "runtime-main.js": "/%20//bobjin42.github.io/sfs-test/static/js/runtime-main.eeaa8ef9.js",
+    "runtime-main.js.map": "/%20//bobjin42.github.io/sfs-test/static/js/runtime-main.eeaa8ef9.js.map",
+    "static/js/2.95947365.chunk.js": "/%20//bobjin42.github.io/sfs-test/static/js/2.95947365.chunk.js",
+    "static/js/2.95947365.chunk.js.map": "/%20//bobjin42.github.io/sfs-test/static/js/2.95947365.chunk.js.map",
+    "index.html": "/%20//bobjin42.github.io/sfs-test/index.html",
+    "precache-manifest.9211bfed97bc2b1ef8537409e7b48c66.js": "/%20//bobjin42.github.io/sfs-test/precache-manifest.9211bfed97bc2b1ef8537409e7b48c66.js",
+    "service-worker.js": "/%20//bobjin42.github.io/sfs-test/service-worker.js",
+    "static/css/main.b9c4dabf.chunk.css.map": "/%20//bobjin42.github.io/sfs-test/static/css/main.b9c4dabf.chunk.css.map",
+    "static/js/2.95947365.chunk.js.LICENSE.txt": "/%20//bobjin42.github.io/sfs-test/static/js/2.95947365.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eeaa8ef9.js",
+    "static/js/2.95947365.chunk.js",
+    "static/css/main.b9c4dabf.chunk.css",
+    "static/js/main.fe3e6267.chunk.js"
+  ]
+}
