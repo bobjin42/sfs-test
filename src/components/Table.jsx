@@ -86,7 +86,6 @@ export default function Table() {
           </tr>
         </thead>
         <tbody>
-          {console.log(tableData)}
           {tableData.map((rowData) => {
             return (
               <TableRow
